@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Brand identities">
+  <rect width="64" height="64" rx="14" fill="#3a0a24"/>
+  <rect x="15" y="15" width="22" height="22" rx="3" fill="none" stroke="#ff6fbd" stroke-width="3" opacity=".55"/>
+  <circle cx="38" cy="38" r="12" fill="#e71081"/>
+  <path d="M15 15h4M15 15v4M37 15h-4M37 15v4M15 37h4M15 37v-4" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+</svg>

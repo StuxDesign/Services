@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Colour and type systems">
+  <rect width="64" height="64" rx="14" fill="#3a0a24"/>
+  <rect x="12" y="40" width="10" height="12" rx="2" fill="#ff6fbd"/>
+  <rect x="24" y="40" width="10" height="12" rx="2" fill="#e71081"/>
+  <rect x="36" y="40" width="10" height="12" rx="2" fill="#8c0a4f"/>
+  <text x="12" y="34" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="700" fill="#fff">Aa</text>
+  <path d="M50 14v24" stroke="#ff6fbd" stroke-width="2" stroke-dasharray="2 3"/>
+</svg>

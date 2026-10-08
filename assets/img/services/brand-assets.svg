@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Brand assets and badges">
+  <rect width="64" height="64" rx="14" fill="#3a0a24"/>
+  <rect x="13" y="18" width="38" height="28" rx="6" fill="none" stroke="#ff6fbd" stroke-width="3"/>
+  <circle cx="23" cy="32" r="5" fill="#e71081"/>
+  <path d="M32 29h12M32 35h8" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+</svg>
