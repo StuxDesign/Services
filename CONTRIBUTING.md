@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://global.media.stux.design/logo.png" height="80" alt="Stux.Design Logo">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://global.media.stux.design/logo-light.png"><source media="(prefers-color-scheme: light)" srcset="https://global.media.stux.design/logo-dark.png"><img src="https://global.media.stux.design/logo-dark.png" height="80" alt="Stux.Design Logo"></picture>
 </p>
 
 # Contributing to Stux.Design Services
