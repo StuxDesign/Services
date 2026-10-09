@@ -22,7 +22,7 @@
       box.appendChild(d);
     });
     document.body.insertBefore(box, document.body.firstChild);
-    document.documentElement.classList.add("has-site-banner", "theme-dark");
+    document.documentElement.classList.add("has-site-banner");
     var bs = document.createElement("script");
     bs.src = "/assets/js/site-banner.js";
     document.body.appendChild(bs);
@@ -187,4 +187,95 @@
       a.setAttribute("title", "Version " + v + ": changelogs");
     });
   }).catch(function () {});
+})();
+
+// Brand swatches: click one to see the whole site in that brand's colour (Stux.Design's own
+// magenta is the default). The pick is remembered in this browser (stuxdesign-accent) and applied
+// on every page; "Back to Stux.Design magenta" or the magenta swatch clears it. On dark each colour
+// gets a lighter tint for text and glows; on light it's deepened until text in it is readable
+// (4.5:1). Buttons get dark or white text, whichever reads better, and a theme change re-applies it.
+(function () {
+  var KEY = "stuxdesign-accent";
+  var DEFAULT = "#e71081";
+  var root = document.documentElement;
+  function rgb(hex) {
+    var n = parseInt(hex.slice(1), 16);
+    return [n >> 16 & 255, n >> 8 & 255, n & 255];
+  }
+  function hex(c) {
+    return "#" + c.map(function (v) { return ("0" + Math.round(v).toString(16)).slice(-2); }).join("");
+  }
+  function luminance(c) {
+    var l = c.map(function (v) { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); });
+    return 0.2126 * l[0] + 0.7152 * l[1] + 0.0722 * l[2];
+  }
+  var lightMq = window.matchMedia ? window.matchMedia("(prefers-color-scheme: light)") : null;
+  function isLight() {
+    var t = root.getAttribute("data-theme");
+    return t ? t === "light" : !!(lightMq && lightMq.matches);
+  }
+  function contrast(a, b) {
+    var x = luminance(a), y = luminance(b);
+    return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05);
+  }
+  var current = null;
+  function apply(color) {
+    current = color;
+    var names = ["--accent", "--accent-rgb", "--accent-bright", "--accent-bright-rgb", "--accent-pink", "--accent-soft", "--accent-grad", "--accent-ink"];
+    if (!color || color === DEFAULT) {
+      names.forEach(function (n) { root.style.removeProperty(n); });
+      return;
+    }
+    var c = rgb(color), b;
+    if (isLight()) {
+      // Deepen it until text in it reads on the light page, as #c20c6c is to #e71081.
+      while (contrast(c, [251, 245, 248]) < 4.5) c = c.map(function (v) { return v * 0.92; });
+      color = hex(c);
+      b = c.map(function (v) { return v * 0.88; });
+    } else {
+      // A lighter tint, as #ff6fbd is to #e71081: 45% of the way to white.
+      b = c.map(function (v) { return v + (255 - v) * 0.45; });
+    }
+    c = c.map(Math.round);
+    root.style.setProperty("--accent", color);
+    root.style.setProperty("--accent-rgb", c.join(", "));
+    root.style.setProperty("--accent-bright", hex(b));
+    root.style.setProperty("--accent-bright-rgb", b.map(Math.round).join(", "));
+    root.style.setProperty("--accent-pink", color);
+    root.style.setProperty("--accent-soft", "rgba(" + c.join(", ") + ", 0.14)");
+    root.style.setProperty("--accent-grad", "linear-gradient(135deg, " + hex(b) + " 0%, " + color + " 100%)");
+    root.style.setProperty("--accent-ink", luminance(c) > 0.4 ? "#110c0f" : "#fff");
+  }
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  if (saved && !/^#[0-9a-f]{6}$/.test(saved)) saved = null;
+  apply(saved);
+  if (lightMq) {
+    var reapply = function () { apply(current); };
+    if (lightMq.addEventListener) lightMq.addEventListener("change", reapply);
+    else if (lightMq.addListener) lightMq.addListener(reapply);
+  }
+
+  var swatches = document.querySelectorAll(".swatch[data-accent]");
+  var reset = document.getElementById("accent-reset");
+  function show(color) {
+    color = color || DEFAULT;
+    Array.prototype.forEach.call(swatches, function (s) {
+      s.setAttribute("aria-pressed", String(s.getAttribute("data-accent") === color));
+    });
+    if (reset) reset.hidden = color === DEFAULT;
+  }
+  function pick(color) {
+    apply(color);
+    show(color);
+    try {
+      if (color === DEFAULT) localStorage.removeItem(KEY);
+      else localStorage.setItem(KEY, color);
+    } catch (e) {}
+  }
+  show(saved);
+  Array.prototype.forEach.call(swatches, function (s) {
+    s.addEventListener("click", function () { pick(s.getAttribute("data-accent")); });
+  });
+  if (reset) reset.addEventListener("click", function () { pick(DEFAULT); });
 })();

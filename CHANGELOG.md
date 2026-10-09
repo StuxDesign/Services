@@ -3,6 +3,14 @@
 All notable changes to Stux.Design Services (services.stux.design) are documented here. This
 project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v1.1.0
+
+### Added
+
+- A light theme, following the system preference: a soft pink-white page with Stux.Design magenta deepened to `#c20c6c` so text and links stay readable (5.5:1 or better). The dark theme is unchanged, and the site banner now follows the theme too
+- The brand swatches in the hero are buttons: click one to see the whole site in that brand's colour, with a lighter tint for text on dark, a deeper shade on light, and dark or white button text, whichever reads better. The pick is remembered in this browser across pages, and "Back to Stux.Design magenta" (or the magenta swatch) resets it
+- Stux.Design itself is listed first under Featured, ahead of Status, with a live status badge and links to stux.design and a way to start a project
+
 ## v1.0.1
 
 ### Fixed

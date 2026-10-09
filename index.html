@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#110c0f">
+  <meta name="theme-color" content="#110c0f" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fbf5f8" media="(prefers-color-scheme: light)">
   <title>Stux.Design Services</title>
   <meta name="description" content="Every Stux.Design service in one place: brand identities, logos, icons, colour and type systems and brand assets, with live status from status.stux.design.">
   <link rel="icon" type="image/png" href="/assets/img/icon.png">
@@ -48,18 +49,20 @@
         <div><strong class="grad">3</strong><span>templates</span></div>
         <div><strong class="grad">5 min</strong><span>between status checks</span></div>
       </div>
-      <!-- Swatches from the brands the studio has drawn; hover or focus one for its name. -->
-      <div class="swatches" role="list" aria-label="Brand colours designed by Stux.Design">
-        <span class="swatch" role="listitem" style="--sw:#d10f0f" title="Stux.Group #d10f0f" tabindex="0"><span>Stux.Group</span></span>
-        <span class="swatch" role="listitem" style="--sw:#4bf708" title="Stuxedo #4bf708" tabindex="0"><span>Stuxedo</span></span>
-        <span class="swatch" role="listitem" style="--sw:#fd6602" title="Stux.Dev #fd6602" tabindex="0"><span>Stux.Dev</span></span>
-        <span class="swatch" role="listitem" style="--sw:#07878e" title="Stux.Cloud #07878e" tabindex="0"><span>Stux.Cloud</span></span>
-        <span class="swatch" role="listitem" style="--sw:#bf7ff9" title="StuxAPIs #bf7ff9" tabindex="0"><span>StuxAPIs</span></span>
-        <span class="swatch" role="listitem" style="--sw:#4752ff" title="Stux.Music #4752ff" tabindex="0"><span>Stux.Music</span></span>
-        <span class="swatch" role="listitem" style="--sw:#38bdf8" title="Stux.Digital #38bdf8" tabindex="0"><span>Stux.Digital</span></span>
-        <span class="swatch" role="listitem" style="--sw:#ffba1a" title="Stux.Games #ffba1a" tabindex="0"><span>Stux.Games</span></span>
-        <span class="swatch is-ours" role="listitem" style="--sw:#e71081" title="Stux.Design #e71081" tabindex="0"><span>Stux.Design</span></span>
+      <!-- Swatches from the brands the studio has drawn; hover or focus one for its name, click it
+           to see the site in that colour (main.js). -->
+      <div class="swatches" role="group" aria-label="Brand colours designed by Stux.Design: pick one to recolour the site">
+        <button type="button" class="swatch" style="--sw:#d10f0f" title="Stux.Group #d10f0f" data-accent="#d10f0f" aria-pressed="false"><span>Stux.Group</span></button>
+        <button type="button" class="swatch" style="--sw:#4bf708" title="Stuxedo #4bf708" data-accent="#4bf708" aria-pressed="false"><span>Stuxedo</span></button>
+        <button type="button" class="swatch" style="--sw:#fd6602" title="Stux.Dev #fd6602" data-accent="#fd6602" aria-pressed="false"><span>Stux.Dev</span></button>
+        <button type="button" class="swatch" style="--sw:#07878e" title="Stux.Cloud #07878e" data-accent="#07878e" aria-pressed="false"><span>Stux.Cloud</span></button>
+        <button type="button" class="swatch" style="--sw:#bf7ff9" title="StuxAPIs #bf7ff9" data-accent="#bf7ff9" aria-pressed="false"><span>StuxAPIs</span></button>
+        <button type="button" class="swatch" style="--sw:#4752ff" title="Stux.Music #4752ff" data-accent="#4752ff" aria-pressed="false"><span>Stux.Music</span></button>
+        <button type="button" class="swatch" style="--sw:#38bdf8" title="Stux.Digital #38bdf8" data-accent="#38bdf8" aria-pressed="false"><span>Stux.Digital</span></button>
+        <button type="button" class="swatch" style="--sw:#ffba1a" title="Stux.Games #ffba1a" data-accent="#ffba1a" aria-pressed="false"><span>Stux.Games</span></button>
+        <button type="button" class="swatch is-ours" style="--sw:#e71081" title="Stux.Design #e71081" data-accent="#e71081" aria-pressed="true"><span>Stux.Design</span></button>
       </div>
+      <p class="swatches-note">Click a colour to see this site in it. <button type="button" id="accent-reset" hidden>Back to Stux.Design magenta</button></p>
       <p class="season-note">Seasonal overlays by <a href="https://seasonaloverlayslibrary.stuxapis.net" target="_blank" rel="noopener">SeasonalOverlaysLibrary</a> from StuxAPIs.</p>
     </div>
   </section>
@@ -72,7 +75,23 @@
       </div>
 
       <h3 class="subhead">Featured</h3>
-      <div class="project-grid">
+      <div class="project-grid two-up">
+
+        <article class="project-card" data-monitor="stuxdesign:stux-design-website">
+          <div class="project-top">
+            <img class="project-icon" src="/assets/img/icon.png" width="64" height="64" alt="Stux.Design icon" loading="lazy">
+            <div>
+              <h3>Stux.Design</h3>
+              <div class="project-tagline">Designed with purpose.</div>
+            </div>
+          </div>
+          <span class="badge-status live" hidden></span>
+          <p class="desc">The design studio itself: the identities, logos and visual assets that make a brand recognisable, including the look of every Stux.Group brand.</p>
+          <div class="project-links">
+            <a href="https://stux.design" target="_blank" rel="noopener">Website</a>
+            <a href="mailto:hello@stux.design">Start a project</a>
+          </div>
+        </article>
 
         <article class="project-card" data-monitor="stuxdesign:*">
           <div class="project-top">

@@ -28,6 +28,7 @@ ticks, a selection box and a strip of the brand colours the studio has drawn.
 
 | Service | What it is | Site | Repo |
 |---|---|---|---|
+| Stux.Design | The design studio itself | [stux.design](https://stux.design) | private |
 | Stux.Design Status | Live status and uptime history of every Stux.Design site | [status.stux.design](https://status.stux.design) | [StuxDesign/Status](https://github.com/StuxDesign/Status) |
 | Brand identities | A brand's whole look: mark, colours, type and the rules for using them | [hello@stux.design](mailto:hello@stux.design) | — |
 | Logos & icons | Logos, wordmarks and app icons, with light and dark variants | [hello@stux.design](mailto:hello@stux.design) | — |
