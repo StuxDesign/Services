@@ -3,6 +3,12 @@
 All notable changes to Stux.Design Services (services.stux.design) are documented here. This
 project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v1.2.0
+
+### Added
+
+- A light/dark toggle at the end of the header on every page, like the brand pages': it shows the theme it switches to (a sun on dark, a moon on light). Until it's used the site follows the system theme; after that the choice is remembered in this browser, and a picked brand colour re-adapts to the new theme
+
 ## v1.1.2
 
 ### Changed

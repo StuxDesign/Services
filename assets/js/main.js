@@ -255,6 +255,8 @@
     if (lightMq.addEventListener) lightMq.addEventListener("change", reapply);
     else if (lightMq.addListener) lightMq.addListener(reapply);
   }
+  // The header's light/dark toggle changes the theme without a media change.
+  window.addEventListener("themechange", function () { apply(current); });
 
   var swatches = document.querySelectorAll(".swatch[data-accent]");
   var reset = document.getElementById("accent-reset");
@@ -278,4 +280,31 @@
     s.addEventListener("click", function () { pick(s.getAttribute("data-accent")); });
   });
   if (reset) reset.addEventListener("click", function () { pick(DEFAULT); });
+})();
+
+// Light/dark toggle in the header: flips the theme and remembers it in this browser (stuxdesign-services-theme).
+// The <head> script applies a remembered choice before paint; with none, the system theme applies.
+(function () {
+  var btn = document.getElementById("theme-toggle");
+  if (!btn) return;
+  var root = document.documentElement;
+  var mq = window.matchMedia ? window.matchMedia("(prefers-color-scheme: light)") : null;
+  function current() {
+    var t = root.getAttribute("data-theme");
+    return t === "light" || t === "dark" ? t : (mq && mq.matches ? "light" : "dark");
+  }
+  function label() {
+    var next = current() === "light" ? "dark" : "light";
+    btn.title = "Switch to " + next + " mode";
+    btn.setAttribute("aria-label", "Switch to " + next + " mode");
+  }
+  label();
+  if (mq && mq.addEventListener) mq.addEventListener("change", label);
+  btn.addEventListener("click", function () {
+    var next = current() === "light" ? "dark" : "light";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("stuxdesign-services-theme", next); } catch (e) {}
+    label();
+    try { window.dispatchEvent(new Event("themechange")); } catch (e) {}
+  });
 })();
