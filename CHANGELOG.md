@@ -1,7 +1,24 @@
 # Changelog
 
 All notable changes to Stux.Design Services (services.stux.design) are documented here. This
-project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+project adheres to [Date Versioning](https://datevers.ing) since v26.10.23 (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## v26.10.23
+
+### Added
+
+- A full favicon set at the site root: `favicon.ico` (16, 32 and 48px), `apple-touch-icon.png` (180px), and `site.webmanifest` with 192px, 512px and maskable 512px icons, linked from every page
+- A Discord link preview (a component embed) on every page except the 404 page and the old `/changelog/` redirect: the home page says what the site is and links to the main services; other pages show their name, description and an Open button. Open Graph tags are unchanged
+- `scripts/build-head.py`, which writes the favicon tags and the Discord embed into each page's `<head>`, and `tests/head.py` and `tests/changelog.js`, which check them and the changelog renderer
+- `tests/version.sh`, which checks that `VERSION.md` is a valid Date Version, a real calendar date not in the future, and the same as the newest entry in this changelog
+
+### Changed
+
+- Switched from Semantic Versioning to [Date Versioning](https://datevers.ing): releases are numbered by their UTC release date as `YY.MM.DD`, with `-1`, `-2`… for later releases the same day. This release follows v1.2.0
+- `commit.sh` and `commit.bat` refuse a `VERSION.md` that isn't a valid Date Version or is dated in the future (UTC), and warn when it's dated before today
+- `README.md` and `CONTRIBUTING.md` describe Date Versioning and the release steps
+- The CI version check and the changelog page's version badge accept Date Versions (`YY.MM.DD` and `YY.MM.DD-N`), and the dev server serves `.webmanifest` correctly
+- `scripts/build-sitemap.py` keeps each generated page's head block in step
 
 ## v1.2.0
 

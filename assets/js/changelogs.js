@@ -113,6 +113,6 @@
   });
   text(SOURCE.version).then(function (v) {
     v = v.trim().replace(/^v/i, "");
-    if (/^\d+\.\d+\.\d+/.test(v)) badge.textContent = "v" + v;
+    if (/^\d+\.\d+\.\d+(-\d+)?$/.test(v)) badge.textContent = "v" + v;
   }).catch(function () {});
 })();
