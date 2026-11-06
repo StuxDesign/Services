@@ -58,7 +58,9 @@ dependency-free Node script (`dev-server.js`); Node just needs to be installed. 
 
 ## Versioning
 
-This project uses [Date Versioning](https://datevers.ing): each release is numbered by its UTC release date as `YY.MM.DD` (for example `26.10.23`), with `-1`, `-2`… for later releases the same day. See [CHANGELOG.md](CHANGELOG.md) for what changed in each release. To release, see [CONTRIBUTING.md](CONTRIBUTING.md); pushing the tag (`git push origin main --tags`) makes the release workflow publish a GitHub Release.
+This project uses [Date Versioning](https://datevers.ing): each release is numbered by its UTC release date as `YY.MM.DD` (for example `26.10.23`), with `-1`, `-2`… for later releases the same day. See [CHANGELOG.md](CHANGELOG.md) for what changed in each release. To release, see [CONTRIBUTING.md](CONTRIBUTING.md); pushing the tag (`git push origin test --tags`) makes the release workflow publish a GitHub Release.
+
+Work happens on the `test` branch. Changes reach `main` only through a pull request from `test`, which needs CI to pass and is reviewed and merged by Leo. Release commits and tags are made on `test` (`git push origin test --tags`) and go live when the pull request is merged.
 
 ## License
 
