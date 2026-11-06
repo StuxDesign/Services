@@ -36,9 +36,11 @@ a single dependency-free Node script; the only requirement is having Node itself
   existing header/footer block when adding a page rather than introducing a templating system.
 - `assets/js/dev-mode.js` is the production default (`DEV_MODE = false`), committed as-is.
   `dev-server.js` intercepts that one path locally and serves a generated version instead.
-- **Icons are self-hosted** in `assets/img/services/`, resized to 128 × 128. Take them from the
-  service's own `global.media.<domain>/icon.png` or its repo.
-- **Only two things load from elsewhere**: live status from
+- **Icons are self-hosted** in `assets/img/services/`. A service with a logo of its own uses it,
+  resized to 128 × 128, from its `global.media.<domain>/icon.png` or its repo. One without gets a
+  256 × 256 badge icon from `scripts/badge-icons.py` (see Before committing).
+- **Only three things load from elsewhere**: the favicons and footer logo from Stux.Design's own
+  media CDN (`global.media.stux.design`), live status from
   `raw.githubusercontent.com/StuxDesign/Status` (Stux.Design's own) and SeasonalOverlaysLibrary
   from `seasonaloverlayslibrary.stuxapis.net` (StuxAPIs). If you add another, update the Privacy Policy.
 
