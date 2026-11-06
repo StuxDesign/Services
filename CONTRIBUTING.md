@@ -101,3 +101,4 @@ The favicon tags and Discord embed in every page's `<head>` sit between `head:be
 - Check both the dev-mode banner (default) and `--no-dev-mode` if you touched `dev-server.js` or
   `assets/js/dev-mode.js`
 - Only link a repository if it is public: no "Repository" link on a card for a private or missing repo. Run `scripts/check-repo-links.sh` (needs `gh`) to list linked repos that are not public
+- Give every card its full name, in its heading and its icon's alt text ("Stux.Design Status", not "Status"), and its own icon, never a shared or generic one. A service without a logo of its own gets a badge-style icon (the Stux.Design mark on a round avatar, with a badge saying what the service is) from `python -I scripts/badge-icons.py stux-design <icon-light.png> assets/img/services`, using https://global.media.stux.design/icon-light.png; add a glyph and file name there for a new one

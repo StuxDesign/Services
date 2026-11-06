@@ -3,6 +3,27 @@
 All notable changes to Stux.Design Services (services.stux.design) are documented here. This
 project adheres to [Date Versioning](https://datevers.ing) since v26.10.23 (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v26.11.06
+
+### Added
+
+- `scripts/badge-icons.py` (copied from StuxGroup/Services, originally from TheRidgwells/Projects, and set to Stux.Design's
+  colours) builds badge-style icons for services without a logo of their own: the Stux.Design mark on a round avatar,
+  with a badge in the corner saying what the service is.
+
+### Changed
+
+- **Every card uses its full name, with its own icon.** "Status" is now Stux.Design Status, with a heartbeat badge on
+  the Stux.Design mark. The studio services are Stux.Design Brand Identities, Logos & Icons, Colour & Type Systems and
+  Brand Assets & Badges (a selection box, pen nib, palette and rosette badge). The templates are Stux.Design Soonpage,
+  Maintenancepage and Servicepage (an hourglass, spanner and browser window) instead of sharing the plain Stux.Design
+  icon. The icons' alt text uses the same full names.
+
+### Removed
+
+- `assets/img/services/status.svg`, `brand-identities.svg`, `logos-icons.svg`, `colour-type.svg`, `brand-assets.svg` and
+  `stux-design.png`, replaced by the badge icons.
+
 ## v26.10.23
 
 ### Added

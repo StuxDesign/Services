@@ -30,13 +30,13 @@ ticks, a selection box and a strip of the brand colours the studio has drawn.
 |---|---|---|---|
 | Stux.Design | The design studio itself | [stux.design](https://stux.design) | private |
 | Stux.Design Status | Live status and uptime history of every Stux.Design site | [status.stux.design](https://status.stux.design) | [StuxDesign/Status](https://github.com/StuxDesign/Status) |
-| Brand identities | A brand's whole look: mark, colours, type and the rules for using them | [hello@stux.design](mailto:hello@stux.design) | — |
-| Logos & icons | Logos, wordmarks and app icons, with light and dark variants | [hello@stux.design](mailto:hello@stux.design) | — |
-| Colour & type systems | Accent colours and typefaces that work on light and dark | [hello@stux.design](mailto:hello@stux.design) | — |
-| Brand assets & badges | Badges, social images, favicons and exported brand files | [hello@stux.design](mailto:hello@stux.design) | — |
-| Soonpage | "Coming soon" page template | [soonpage.stux.design](https://soonpage.stux.design) | [StuxDesign/soonpage](https://github.com/StuxDesign/soonpage) |
-| Maintenancepage | Maintenance page template | [maintenancepage.stux.design](https://maintenancepage.stux.design) | [StuxDesign/maintenancepage](https://github.com/StuxDesign/maintenancepage) |
-| Servicepage | Placeholder for services not yet set up | [servicepage.stux.design](https://servicepage.stux.design) | [StuxDesign/servicepage](https://github.com/StuxDesign/servicepage) |
+| Stux.Design Brand Identities | A brand's whole look: mark, colours, type and the rules for using them | [hello@stux.design](mailto:hello@stux.design) | — |
+| Stux.Design Logos & Icons | Logos, wordmarks and app icons, with light and dark variants | [hello@stux.design](mailto:hello@stux.design) | — |
+| Stux.Design Colour & Type Systems | Accent colours and typefaces that work on light and dark | [hello@stux.design](mailto:hello@stux.design) | — |
+| Stux.Design Brand Assets & Badges | Badges, social images, favicons and exported brand files | [hello@stux.design](mailto:hello@stux.design) | — |
+| Stux.Design Soonpage | "Coming soon" page template | [soonpage.stux.design](https://soonpage.stux.design) | [StuxDesign/soonpage](https://github.com/StuxDesign/soonpage) |
+| Stux.Design Maintenancepage | Maintenance page template | [maintenancepage.stux.design](https://maintenancepage.stux.design) | [StuxDesign/maintenancepage](https://github.com/StuxDesign/maintenancepage) |
+| Stux.Design Servicepage | Placeholder for services not yet set up | [servicepage.stux.design](https://servicepage.stux.design) | [StuxDesign/servicepage](https://github.com/StuxDesign/servicepage) |
 
 This table (and the matching cards on the site) is the source of truth for what's listed. Update
 both together when a service is added, retired or renamed. Each card shows one badge above its
