@@ -3,6 +3,16 @@
 All notable changes to Stux.Design Services (services.stux.design) are documented here. This
 project adheres to [Date Versioning](https://datevers.ing) since v26.10.23 (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v26.11.07
+
+### Changed
+
+- **The hero's eyebrow is a live status badge.** It keeps the eyebrow's size and shape, but takes a status badge's
+  colour (green, amber for degraded or partial, red) and dot (pulsing when up, still with reduced motion), shows only
+  the state (All operational, Degraded, Partial outage or Major outage), and links to status.stux.design. It reuses the
+  card badges' `summary.json` fetch, so there's no extra request. If the status can't load, it stays the plain
+  Stux.Design eyebrow.
+
 ## v26.11.06-2
 
 ### Changed

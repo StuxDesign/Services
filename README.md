@@ -14,7 +14,7 @@ in Stux.Design magenta (`#e71081`), with the hero drawn as a designer's artboard
 ticks, a selection box and a strip of the brand colours the studio has drawn.
 
 - Plain HTML, CSS and JavaScript: no framework, no bundler, no dependencies to install
-- **Live status** on each card, read from [status.stux.design](https://status.stux.design)
+- **Live status** on each card and in the hero's eyebrow, read from [status.stux.design](https://status.stux.design)
   (`StuxDesign/Status`, powered by [GitHup](https://githup.stux.group))
 - **Seasonal overlays** from [SeasonalOverlaysLibrary](https://seasonaloverlayslibrary.stuxapis.net)
   (StuxAPIs): today's preset plays once per visit (never with reduced motion), and the hero button

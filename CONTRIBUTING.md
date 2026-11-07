@@ -70,6 +70,16 @@ repository goes under Discontinued.
 6. Update the hero's counts if they changed
 7. To add a brand colour the studio has drawn, add a `.swatch` to the hero's swatch strip
 
+## Hero eyebrow (live status)
+
+The pill above the hero headline is a link to status.stux.design marked `data-status-eyebrow="stuxdesign:*"` (the
+whole status page; `<source>:<slug>` would follow one monitor). `main.js` fills it from the same `summary.json` fetch
+as the card badges, so there's no second request: it takes a status badge's colour (green, amber for degraded or
+partial, red) and dot (pulsing when up, still with `prefers-reduced-motion`), hides `.eyebrow-brand`, and shows only
+the state in `.eyebrow-state`: All operational, Degraded, Partial outage or Major outage (Online, Degraded or Offline
+for one monitor). It keeps the eyebrow's size and shape. If the status can't load, nothing changes and it reads
+Stux.Design as before. Keep both spans.
+
 ## Seasonal overlays
 
 `main.js` asks SeasonalOverlaysLibrary for today's preset from its calendar. It plays once per
