@@ -3,6 +3,14 @@
 All notable changes to Stux.Design Services (services.stux.design) are documented here. This
 project adheres to [Date Versioning](https://datevers.ing) since v26.10.23 (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v26.11.08
+
+### Changed
+
+- The site no longer promises status checks "every 5 minutes": the Stux.Design Status card, the status band and its
+  live text say "checked regularly", and the hero's third stat is now 90 days of uptime history instead of 5 minutes
+  between checks. GitHub runs the 5-minute status schedule best-effort, often much less often, and the status page now shows the real check rhythm.
+
 ## v26.11.07
 
 ### Changed
