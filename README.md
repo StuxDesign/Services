@@ -71,4 +71,4 @@ redistribution. Lato and Poppins (`assets/fonts/`) are under the SIL Open Font L
 
 *Designed with purpose. | Part of the Stux.Group Brand of Companies.*
 
-Stux.Design is operated by **Stux Group Ltd**, a company registered in England and Wales (company no. 13160574), registered office 124 City Road, London, EC1V 2NX, England.
+Stux.Design is operated by **Stux Group Ltd**, a company registered in England and Wales (company no. 13160574), registered office 124 City Road, London, EC1V 2NX, England, United Kingdom.
