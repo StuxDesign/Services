@@ -50,6 +50,7 @@ services have no badge: they're work the studio takes on, not sites to monitor.
 ```
 ./dev-server.sh          # http://127.0.0.1:8080, DEV_MODE forced on
 ./dev-server.sh 3000 --no-dev-mode
+./dev-server.sh --lan    # also open it from a phone or tablet on your network
 ```
 
 On Windows, use `dev-server.bat` instead. No `npm install` needed: the dev server is a single

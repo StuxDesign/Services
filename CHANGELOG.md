@@ -3,6 +3,14 @@
 All notable changes to Stux.Design Services (services.stux.design) are documented here. This
 project adheres to [Date Versioning](https://datevers.ing) since v26.10.23 (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v26.11.15
+
+### Added
+
+- `--lan` for `dev-server.sh`/`.bat` (and `dev-server.js`): the server listens on all interfaces instead of
+  127.0.0.1 only, so phones and tablets on the local network can open it, and prints this machine's IPv4
+  addresses to use. Without it nothing changes.
+
 ## v26.11.13-1
 
 ### Changed
