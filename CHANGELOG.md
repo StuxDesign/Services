@@ -3,6 +3,21 @@
 All notable changes to Stux.Design Services (services.stux.design) are documented here. This
 project adheres to [Date Versioning](https://datevers.ing) since v26.10.23 (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v26.11.15-1
+
+### Added
+
+- A `staging` branch between `test` and `main`. Work and releases happen on `test`, then go `test` → `staging` →
+  `main` through pull requests; nothing is pushed to `staging` or `main` directly.
+
+### Changed
+
+- `commit.sh` / `commit.bat` refuse to run on `staging` or `main`, and after tagging print the push command and the
+  two pull requests to open.
+- CI also runs on pushes to `staging` and on pull requests into it.
+- CONTRIBUTING's Branches section is now **Branches and going live**, and the README's Versioning section describes
+  the `test` → `staging` → `main` flow.
+
 ## v26.11.15
 
 ### Added
